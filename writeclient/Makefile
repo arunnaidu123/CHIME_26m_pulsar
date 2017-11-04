@@ -24,7 +24,9 @@ FILES = \
 
 %.o: %.cpp
 	$(CPP) $(CFLAGS) -o $@ -c $< $(LD_FLAGS)
-	
+
+all: writeclient allocate_buffers
+
 writeclient: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
